@@ -1,0 +1,58 @@
+/* =========================
+   АДАПТИВ ПІД МОБІЛКУ
+   ========================= */
+
+@media (max-width: 768px) {
+
+  /* Меню стає вертикальним */
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  /* Контент у колонках → в один стовпець */
+  .two-column {
+    flex-direction: column;
+  }
+
+  /* Заголовки менші */
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* Менші відступи */
+  .section {
+    padding: 15px;
+  }
+
+  .card {
+    padding: 15px;
+  }
+
+  /* Контейнер під телефон */
+  .container {
+    width: calc(100% - 20px);
+  }
+
+  /* Таблиця не ламає екран */
+  table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  /* Кнопка на всю ширину */
+  button {
+    width: 100%;
+  }
+
+  /* Відео та зображення не вилітають */
+  img,
+  video {
+    max-width: 100%;
+    height: auto;
+  }
+}

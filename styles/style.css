@@ -1,0 +1,269 @@
+/* =========================
+   ЗМІННІ (кольори)
+   ========================= */
+:root {
+  --color-primary: #1d4e89;
+  --color-accent: #ffb703;
+  --color-bg: #f7f9fc;
+  --color-text: #1f2937;
+  --color-border: #d9e2ec;
+}
+
+/* =========================
+   БАЗА
+   ========================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* контейнер */
+.container {
+  width: min(1100px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+.site-header {
+  background: linear-gradient(90deg, #1d4e89, #2563eb);
+  padding: 15px 0;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+.nav-list {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  color: white;
+  text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+}
+
+/* hover */
+.nav-list a:hover {
+  color: var(--color-accent);
+}
+
+/* underline animation */
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: var(--color-accent);
+  transition: 0.3s;
+}
+
+.nav-list a:hover::after {
+  width: 100%;
+}
+
+/* active page */
+.nav-list a.active {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* =========================
+   SECTION / CARD
+   ========================= */
+.section {
+  margin: 30px 0;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* hover ефект */
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   TEXT
+   ========================= */
+h1 {
+  font-size: 36px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+/* =========================
+   LISTS
+   ========================= */
+ul li {
+  margin-bottom: 5px;
+}
+
+ul li::marker {
+  color: var(--color-accent);
+}
+
+/* =========================
+   IMAGES
+   ========================= */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+img:hover {
+  transform: scale(1.03);
+}
+
+/* =========================
+   TABLE
+   ========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+th {
+  background: #2563eb;
+  color: white;
+}
+
+td, th {
+  padding: 10px;
+  border: 1px solid var(--color-border);
+}
+
+tr:nth-child(even) {
+  background: #f1f5f9;
+}
+
+tr:hover {
+  background: #e0e7ff;
+}
+
+/* =========================
+   MEDIA (video/audio)
+   ========================= */
+video {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* =========================
+   FORM
+   ========================= */
+.form-group {
+  margin-bottom: 15px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.5);
+}
+
+/* =========================
+   BUTTON
+   ========================= */
+button {
+  background: var(--color-primary);
+  color: white;
+  padding: 12px 18px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #163b6b;
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  background: var(--color-primary);
+  color: white;
+}
+
+/* =========================
+   FLEXBOX
+   ========================= */
+.two-column {
+  display: flex;
+  gap: 20px;
+}
+
+/* =========================
+   SCROLL
+   ========================= */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 🌙 Темна тема */
+body.dark {
+  background: #111;
+  color: #fff;
+}
+
+body.dark .card {
+  background: #1e1e1e;
+}
+
+body.dark .site-header {
+  background: #222;
+}
+
+body.dark .site-footer {
+  background: #222;
+}

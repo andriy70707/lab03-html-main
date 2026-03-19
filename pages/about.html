@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Про мене" />
+  <title>Про мене</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/responsive.css">
+
+  <!-- JS -->
+  <script src="../js/main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+
+      <!-- 🔥 ТЕМА -->
+      <button id="themeBtn">🌙</button>
+
+      <nav>
+        <ul class="nav-list">
+          <li><a href="../index.html">Головна</a></li>
+          <li><a href="./about.html">Про мене</a></li>
+          <li><a href="./contact.html">Контакти</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="container">
+
+    <!-- Текст -->
+    <section class="section card">
+      <h1>Про мене</h1>
+
+      <p>
+        Мене звати Андрій Фішбух. Я студент, який вивчає Web-програмування та Front-end.
+        Цей сайт створений як практична робота.
+      </p>
+
+      <h2>Коротко</h2>
+      <p>
+        Це сторінка з прикладом відео та аудіо в HTML.
+      </p>
+    </section>
+
+    <!-- 🔥 АКОРДЕОН -->
+    <section class="section card">
+      <h2>Мої навички</h2>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">HTML</button>
+        <div class="accordion-content">
+          <p>Створення структури сайтів</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">CSS</button>
+        <div class="accordion-content">
+          <p>Оформлення та адаптивність</p>
+        </div>
+      </div>
+
+      <div class="accordion-item">
+        <button class="accordion-btn">JavaScript</button>
+        <div class="accordion-content">
+          <p>Інтерактив сайту</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLEX -->
+    <section class="section two-column">
+
+      <!-- Відео -->
+      <div class="card">
+        <h2>Моє відео</h2>
+
+        <video controls>
+          <source src="../assets/media/demo.mp4" type="video/mp4" />
+          <source src="../assets/media/demo.webm" type="video/webm" />
+        </video>
+
+        <!-- 🔥 кнопка модалки -->
+        <button id="openModal">Збільшити</button>
+      </div>
+
+      <!-- Аудіо -->
+      <div class="card">
+        <h2>Мій аудіотрек</h2>
+
+        <audio controls>
+          <source src="../assets/media/demo.mp3" type="audio/mpeg" />
+        </audio>
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- 🔥 МОДАЛКА -->
+  <div id="modal" hidden>
+    <div class="card">
+      <video controls>
+        <source src="../assets/media/demo.mp4">
+      </video>
+      <button id="closeModal">Закрити</button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; <span id="year"></span> Андрій Фішбух </p>
+    </div>
+  </footer>
+
+  <!-- 🔥 ВГОРУ -->
+  <button id="topBtn">↑</button>
+
+</body>
+</html>
